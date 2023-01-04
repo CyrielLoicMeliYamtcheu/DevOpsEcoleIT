@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # The following step execute a shell script
-      - name: "Say hello"
-        run: |
-          echo "Hello, world !"
+      - name: "Install python"
+        run: sudo apt install python
+      - name: "Install pylint"
+        run: pip install pylint
+      - name: "Test"
+        run: pylint test.py

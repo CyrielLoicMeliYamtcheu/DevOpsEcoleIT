@@ -9,7 +9,7 @@ jobs:
     steps:
       # The following step execute a shell script
       - name: "Install python"
-        run: sudo apt install python
+        run: sudo apt update && sudo apt install python3 && sudo apt install python3-pip
       - name: "Install pylint"
         run: pip install pylint
       - name: "Test"

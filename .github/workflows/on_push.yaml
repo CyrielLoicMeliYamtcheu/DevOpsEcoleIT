@@ -10,7 +10,8 @@ jobs:
       # The following step execute a shell script
       - name: "Install python"
         run: sudo apt update && sudo apt install python3 && sudo apt install python3-pip
+      - uses: actions/checkout@v1
       - name: "Install pylint"
         run: pip install pylint
-      - name: "Test"
-        run: pylint test.py
+      - name: "Execute script"
+        run: pylint ./test.py
